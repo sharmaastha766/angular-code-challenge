@@ -8,7 +8,7 @@ import { DataGithubService } from '../data-github.service';
 })
 export class HomeComponent implements OnInit {
   
-  allData:any={}
+  allData:any=[]
   showData:boolean=false;
   history:any=[];
 
@@ -16,31 +16,36 @@ export class HomeComponent implements OnInit {
   constructor(private dataGithubService:DataGithubService) { }
 
   ngOnInit(): void {
-    this.getDashboardData();
+    // this.getDashboardData();
   }
 
   getDashboardData() {
-    this.dataGithubService.getGithubData().subscribe(data => {
+    this.dataGithubService.getGithubData(this.searchText).subscribe(data => {
       if (data) {
+        this.showData=true;
         console.log(data);
-        this.allData=data;
+        this.allData.push(data);
+        console.log(this.allData);
+        
       }
     });
   }
 
-  searchUser()
-  { 
-    console.log("searchededdd");
-    this.showData=true;
-    var resArray: { login: string; }[]=[];
-    this.allData.forEach((element: { login: string; }) => {
-      if (element.login.toLowerCase().includes(this.searchText))
-        resArray.push(element);
-        this.history.push(element);
-    });
-    this.allData=resArray
-    return this.allData;
+//   searchUser()
+//   { 
+//     console.log("searchededdd");
+//     this.getDashboardData();
+//     // this.showData=true;
+//     // var resArray: { login: string; }[]=[];
+//     // this.allData.forEach((element: { login: string; }) => {
+//     //   if (element.login.toLowerCase().includes(this.searchText))
+//     //     resArray.push(element);
+//     //     this.history.push(element);
+//     // });
+//     // this.allData=resArray
+//     // console.log(this.allData);
+//     // return this.allData;
     
-  }
+//   }
 
 }

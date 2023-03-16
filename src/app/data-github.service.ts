@@ -13,16 +13,16 @@ export class DataGithubService {
   constructor(private http: HttpClient) {
   }
 
-  getGithubData(): Observable<any> {
+  getGithubData(searchText:any): Observable<any> {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer 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`
+      'Authorization': "`Bearer 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`"
     });
 
     const requestOptions = { headers: headers };
-  
-    return this.http.get(this.url,requestOptions);
+    console.log("search"+searchText);
+    return this.http.get(this.url+"/"+searchText,requestOptions);
   }
 }
 
