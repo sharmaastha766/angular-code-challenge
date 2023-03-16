@@ -1,0 +1,42 @@
+<div class="bg-body rounded">
+  <app-header></app-header>
+    <div class="container-md mt-1 pb-0">
+      <div class="row" id="row">
+        <div class="text-center">
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="center-block"> Search GitHub User
+                </div>
+              <div class="panel-body">
+                <div class="d-grid">
+                <input class="form-control mt-4 me-2"  type="text" placeholder=" Search here" aria-label="Search" [(ngModel)]="searchText"
+                [ngModelOptions]="{standalone: true}">
+                <!-- <i class="fa fa-search"></i> -->
+                <div class="btn btn-success mt-4 search" (click)="searchUser();">Search</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-xs p-0" *ngIf="showData">
+      <div class="row" id="row">
+        <div class="text-center">
+          <div class="center-block align-items-start mb-2" >Search Results</div>
+          <div class="p-3 bg-light fixBox">
+            <div class="container" *ngFor="let item of allData;index as in">
+              <div class="image">
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fuser-profile&psig=AOvVaw31thzFQPrkKDDxVulOynY7&ust=1679043706143000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOi9qq6L4P0CFQAAAAAdAAAAABAE">
+              </div>
+              <div class="text d-grid">
+                <h3>Github Username</h3>
+                <h3>{{item.login}}</h3>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+</div>

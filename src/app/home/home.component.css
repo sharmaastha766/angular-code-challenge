@@ -1,0 +1,233 @@
+.bg-body
+{
+    background-color:#f4faff !important;
+    height: 100vh;
+}
+
+.bg-light
+{
+    background-color:rgb(240 246 248 / 77%) !important;
+
+}
+
+.search
+{
+    background-color: #6bd1bd;
+    border-color: #6bd1bd;
+}
+
+
+.text-center {
+    margin-top: 2vw;
+  }
+  
+  .bg-body {
+    height: 100vh;
+    background-color: #F4F6F9 !important;
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+  
+  .bg-light {
+    background-color: white !important;
+  }
+  
+  select {
+    width: 65%;
+    height: 4vh;
+    border-radius: 0.3rem !important;
+    border: 1.5px solid #E5EDF4 !important;
+  }
+  
+  option {
+    color: #495057 !important;
+  }
+  
+  .container-md {
+    padding: 5rem 15rem !important;
+  }
+  
+  .center-block {
+    color: #4E6287 !important;
+    font-size: 20px;
+  }
+  
+  hr {
+    color: #4E6287 !important;
+  }
+  
+  .alert-success {
+    color: #14853D !important;
+    background-color: rgba(20, 133, 61, 0.1) !important;
+  }
+  
+  .alert-danger {
+    color: #DB4D8A !important;
+    background-color: rgba(219, 77, 138, 0.1) !important;
+  }
+  
+  #plagForm {
+    display: inline-flex !important;
+    width: 100% !important;
+  }
+  
+  #plagField {
+    color: #4E6287 !important;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  #submitButton {
+    background-color: #2d98da !important;
+  }
+  
+  #plagLabel {
+    color: #4E6287 !important;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  #plagText {
+    height: 10vh !important;
+    max-height: 20vh;
+  }
+  
+  .form-control {
+    margin-right: 1rem;
+    border: 1px solid #BED3E4 !important;
+    height:3vw;
+  }
+  
+  .d-flex {
+    align-items: center;
+  }
+  
+  ::ng-deep .mat-form-field-infix {
+    border-top: none !important;
+  }
+  
+  .mat-select-panel {
+    background-color: aliceblue !important;
+  }
+  
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+  
+    display: none !important;
+  
+  }
+  
+  ::ng-deep.mat-form-field-underline {
+    display: none !important;
+  }
+  
+  ::ng-deep.mat-form-field-flex {
+    border: 1px solid #BED3E4 !important;
+    width: calc(100% - -320px) !important;
+    background-color: white !important;
+    border-radius: 4px 4px 4px 4px !important;
+    top: 0.8vw;
+    position: relative;
+  }
+  
+  ::ng-deep.mat-select-arrow-wrapper {
+    transform: translate(-10%) !important;
+  }
+  
+  ::ng-deep.mat-select-panel {
+    margin-top: 2vw !important;
+    border: 1px solid #BED3E4;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    min-width: calc(100% + 25px) !important;
+    margin-left: 0.2vw !important;
+  }
+  
+  ::ng-deep.mat-option {
+    color: #001F52 !important;
+  
+  }
+  
+  
+  ::ng-deep.mat-select-value {
+    color: #001F52 !important;
+  }
+  
+  ::ng-deep.mat-select-placeholder {
+    color: #001F52 !important;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    ::ng-deep.mat-form-field-flex {
+      width: calc(100% - 10px) !important;
+    }
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    ::ng-deep.mat-form-field-flex {
+      width: calc(100% - -200px) !important;
+    }
+  }
+  
+  @media only screen and (max-width: 990px) {
+    ::ng-deep.mat-form-field-flex {
+      width: calc(100% - 90px) !important;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    ::ng-deep.mat-form-field-flex {
+      width: calc(100% - 170px) !important;
+    }
+  }
+  
+  @media (min-width: 990px) and (max-width:1200px) {
+    ::ng-deep.mat-form-field-flex {
+      width: calc(100% - -80px) !important;
+    }
+  }
+  
+  
+  .text-area
+  {
+    overflow:hidden;
+    resize:none;
+    height:10vh;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .bg-body
+  {
+      width: 100%;
+  }
+
+  .fixBox
+  {
+    width: 36vw;
+    margin-left: 32vw;
+  }
+
+  .container {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+   }
+   
+   img {
+     max-width: 100%;
+     max-height:100%;
+   }
+   
+   .text {
+     font-size: 70px;
+   }
+   

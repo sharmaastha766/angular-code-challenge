@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light pb-0">
+  <div class="container-fluid">
+    <mat-tab-group (selectedTabChange)="onTabClick($event)">
+      <mat-tab label="Home">
+        <ng-template matTabContent>
+          <app-home></app-home>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Search"> Content 2 </mat-tab>
+      <ng-template matTabContent>
+        <app-history></app-history>
+      </ng-template>
+    </mat-tab-group>
+  </div>
+</nav>
