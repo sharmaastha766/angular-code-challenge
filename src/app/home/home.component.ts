@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataGithubService } from '../data-github.service';
+import { PreviousSearchesService } from '../previous-searches.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   history:any=[];
 
   searchText:any="";
-  constructor(private dataGithubService:DataGithubService) { }
+  constructor(private dataGithubService:DataGithubService, private previousSearchesService:PreviousSearchesService) { }
 
   ngOnInit(): void {
     // this.getDashboardData();
@@ -21,31 +22,15 @@ export class HomeComponent implements OnInit {
 
   getDashboardData() {
     this.dataGithubService.getGithubData(this.searchText).subscribe(data => {
+      this.allData=[];
       if (data) {
         this.showData=true;
         console.log(data);
         this.allData.push(data);
-        console.log(this.allData);
-        
+        this.history.push(data);
+        this.previousSearchesService.changeHistory(this.history);
       }
     });
   }
-
-//   searchUser()
-//   { 
-//     console.log("searchededdd");
-//     this.getDashboardData();
-//     // this.showData=true;
-//     // var resArray: { login: string; }[]=[];
-//     // this.allData.forEach((element: { login: string; }) => {
-//     //   if (element.login.toLowerCase().includes(this.searchText))
-//     //     resArray.push(element);
-//     //     this.history.push(element);
-//     // });
-//     // this.allData=resArray
-//     // console.log(this.allData);
-//     // return this.allData;
-    
-//   }
 
 }

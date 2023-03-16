@@ -1,8 +1,10 @@
+
+
 <div class="bg-body rounded">
   <app-header></app-header>
     <div class="container-md mt-1 pb-0">
       <div class="row" id="row">
-        <div class="text-center">
+        <div class="text-center" >
             <div class="panel panel-default">
               <div class="panel-heading clearfix">
                 <div class="center-block"> Search GitHub User
@@ -26,7 +28,7 @@
         <div class="text-center">
           <div class="mb-2 styleSearch" >Search Results</div>
           <div class="p-3 bg-light fixBox">
-            <div class="container" *ngFor="let item of allData;index as in">
+            <div class="container mb-2" *ngFor="let item of allData;index as in">
               <div class="image">
                 <img src={{item.avatar_url}}>
               </div>

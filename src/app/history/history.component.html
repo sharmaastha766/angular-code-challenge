@@ -1,4 +1,52 @@
-<div class="body">
-<app-header></app-header>
-<p>history works!</p>
+<div class="bg-body rounded">
+    <app-header></app-header>
+    <div class="container-md p-0">
+        <div class="row" id="row">
+            <div class="text-center">
+                <div class="mb-4 center-block">Your Search History</div>
+                <div class="p-3 bg-light">
+                    <table *ngIf="historyList.length>0">
+                        <thead>
+                            <tr class="py-3">
+                                <th class="col-1 ps-5" style="text-align: left;" scope="col"></th>
+                                <th class="col-3 text-align-start" scope="col">Search Term</th>
+                                <th class="col-4" scope="col">Search Results</th>
+                                <th class="col-4" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let item of historyList;index as in">
+                            <tr class="py-3">
+                                <td class="col-1 ps-5 text-start">
+                                </td>
+                                <td class="col-3">
+                                    {{item.login}}
+                                </td>
+                                <td class="col-4">
+                                    <div class="image">
+                                        <img src={{item.avatar_url}} width="30%" height="30%">
+                                    </div>
+                                    
+                                </td>
+
+                                <td class="col-4">
+                                    <div class="text d-grid">
+                                        <h3>Github Username</h3>
+                                        <h3>{{item.login}}</h3>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div *ngIf="historyList.length==0" class="center-block p-5"> Nothing to show</div>
+
+                </div>
+                <div *ngIf="historyList.length>0" class="btn btn-success mt-4 search" (click)="deleteHistory()">
+                    Clear History
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

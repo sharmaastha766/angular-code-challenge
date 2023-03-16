@@ -14,14 +14,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onTabClick(event: any): void { // clicked tab can be get using event.index
-    console.log("reachedddd", event.index);
-    // if(event.index==0)
-    //   this.router.navigate(['home']);
-    // else
-    // {
-    //   this.router.navigate(['history']);
-    // }
+  public onTabClick(event: any): void {
+    if(event.index==0)
+      this.router.navigate(['home']);
+    else
+    {
+      this.router.navigate(['history']);
+    }
 }
 
 }
